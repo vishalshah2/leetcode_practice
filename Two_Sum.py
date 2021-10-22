@@ -6,5 +6,13 @@ def twosum(num, target):
                 list.extend([i,j])
                 return list
 
+n = int(input('Enter a number of elements: '))
+input_list = []
+for i in range(0, n):
+    data = int(input())
+    input_list.extend([data])
 
-print(twosum([1,2,3,5,6], 7))
+print(input_list)
+target = int(input('Please provide target value: '))
+
+print(twosum(input_list, target))
