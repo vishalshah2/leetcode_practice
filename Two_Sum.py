@@ -1,18 +1,21 @@
+n = int(input('Enter number of Element: '))
+list= []
+
+for i in range(n):
+    data = int(input('Enter the velue of element ' + str(i+1) + ': '))
+    list.extend([data])
+
+target = int(input('Enter the Target value: '))
+print('The list of Element ' + str(list) + ' And Target ' + str(target))
+
 def twosum(num, target):
-    list = []
+    ans = []
+    print(len(num))
     for i in range(len(num)):
         for j in range(1, len(num)):
-            if ((i != j) and (num[i] + num[j] == target)):
-                list.extend([i,j])
-                return list
+            if (i != j) and (num[i] + num[j] == target):
+                ans.extend([i, j])
+                return ans
 
-n = int(input('Enter a number of elements: '))
-input_list = []
-for i in range(0, n):
-    data = int(input())
-    input_list.extend([data])
+print(twosum(list, target))
 
-print(input_list)
-target = int(input('Please provide target value: '))
-
-print(twosum(input_list, target))
